@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16C18420F5D3B500B2D745 /* MainViewController.swift */; };
+		CB1A70FB20F6F5E900C0B94A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FA20F6F5E900C0B94A /* User.swift */; };
+		CB1A710020F7188100C0B94A /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FF20F7188100C0B94A /* SearchResultViewController.swift */; };
+		CB1A710220F7355200C0B94A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A710120F7355200C0B94A /* APIManager.swift */; };
 		CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67CCF820F3687C006B22B6 /* AppDelegate.swift */; };
-		CB67CCFB20F3687C006B22B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67CCFA20F3687C006B22B6 /* ViewController.swift */; };
 		CB67CCFE20F3687D006B22B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB67CCFC20F3687D006B22B6 /* Main.storyboard */; };
 		CB67CD0020F3687D006B22B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB67CCFF20F3687D006B22B6 /* Assets.xcassets */; };
 		CB67CD0320F3687D006B22B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB67CD0120F3687D006B22B6 /* LaunchScreen.storyboard */; };
@@ -19,9 +22,12 @@
 		2A032273303A611529629722 /* Pods-GitSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch.release.xcconfig"; sourceTree = "<group>"; };
 		71DBA2942939E4451AFD5014 /* Pods-GitSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		A5D02D3672BC0F7F99A1442A /* Pods_GitSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB16C18420F5D3B500B2D745 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CB1A70FA20F6F5E900C0B94A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CB1A70FF20F7188100C0B94A /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		CB1A710120F7355200C0B94A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CB67CCF520F3687C006B22B6 /* GitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67CCF820F3687C006B22B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB67CCFA20F3687C006B22B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB67CCFD20F3687D006B22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB67CCFF20F3687D006B22B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB67CD0220F3687D006B22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +63,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB1A70FC20F6F5F700C0B94A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A70FA20F6F5E900C0B94A /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB1A70FD20F6F60000C0B94A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB16C18420F5D3B500B2D745 /* MainViewController.swift */,
+				CB1A70FF20F7188100C0B94A /* SearchResultViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CB1A70FE20F70F8B00C0B94A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CB1A710120F7355200C0B94A /* APIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CB67CCEC20F3687C006B22B6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +109,10 @@
 		CB67CCF720F3687C006B22B6 /* GitSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CB1A70FE20F70F8B00C0B94A /* Network */,
+				CB1A70FC20F6F5F700C0B94A /* Model */,
+				CB1A70FD20F6F60000C0B94A /* ViewController */,
 				CB67CCF820F3687C006B22B6 /* AppDelegate.swift */,
-				CB67CCFA20F3687C006B22B6 /* ViewController.swift */,
 				CB67CCFC20F3687D006B22B6 /* Main.storyboard */,
 				CB67CCFF20F3687D006B22B6 /* Assets.xcassets */,
 				CB67CD0120F3687D006B22B6 /* LaunchScreen.storyboard */,
@@ -100,6 +133,7 @@
 				CB67CCF220F3687C006B22B6 /* Frameworks */,
 				CB67CCF320F3687C006B22B6 /* Resources */,
 				CB67CD0A20F36948006B22B6 /* ShellScript */,
+				B46BA1EC426A294A3C68A3C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +209,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B46BA1EC426A294A3C68A3C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CB67CD0A20F36948006B22B6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,8 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB67CCFB20F3687C006B22B6 /* ViewController.swift in Sources */,
+				CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */,
 				CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */,
+				CB1A710220F7355200C0B94A /* APIManager.swift in Sources */,
+				CB1A710020F7188100C0B94A /* SearchResultViewController.swift in Sources */,
+				CB1A70FB20F6F5E900C0B94A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,10 +412,7 @@
 				DEVELOPMENT_TEAM = 7XZYKQ99YK;
 				INFOPLIST_FILE = GitSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jhyejun.GitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -365,10 +429,7 @@
 				DEVELOPMENT_TEAM = 7XZYKQ99YK;
 				INFOPLIST_FILE = GitSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jhyejun.GitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
