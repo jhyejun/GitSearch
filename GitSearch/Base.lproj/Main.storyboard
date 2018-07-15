@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NIP-t3-gSL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,26 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--깃서치-->
+        <scene sceneID="fI5-LH-4S1">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="GitSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Ovj-df-afp" customClass="MainViewController" customModule="GitSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="haq-Oc-pkl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UFm-aB-76k">
-                                <rect key="frame" x="112.5" y="178.5" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-Mo-kAA">
+                                <rect key="frame" x="162.5" y="74" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="20V-kH-Oex"/>
-                                    <constraint firstAttribute="height" constant="150" id="D09-WV-7Yc"/>
+                                    <constraint firstAttribute="width" constant="50" id="Bha-ZG-Qdv"/>
+                                    <constraint firstAttribute="height" constant="50" id="QKJ-Pe-n3K"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-1z-yVH" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="30" y="359" width="315" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-ay-AI8" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="10" y="139" width="355" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ZtD-no-TIM"/>
+                                    <constraint firstAttribute="height" constant="50" id="KUf-vt-QXR"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -38,86 +37,61 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.53409618140000004" green="0.59629547599999999" blue="0.81492191550000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="searchTextField"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="touchedSearchTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylT-9Q-Wbc"/>
-                                </connections>
                             </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="UFm-aB-76k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1tt-Pz-z4G"/>
-                            <constraint firstItem="vcF-1z-yVH" firstAttribute="centerX" secondItem="UFm-aB-76k" secondAttribute="centerX" id="3Fh-fj-nqP"/>
-                            <constraint firstItem="vcF-1z-yVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4QZ-Gc-BEi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vcF-1z-yVH" secondAttribute="trailing" constant="30" id="4iL-YX-k0l"/>
-                            <constraint firstItem="vcF-1z-yVH" firstAttribute="top" secondItem="UFm-aB-76k" secondAttribute="bottom" constant="30" id="ND1-1v-rbQ"/>
-                            <constraint firstItem="UFm-aB-76k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="iU0-hA-N2l"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="gitIconImageView" destination="UFm-aB-76k" id="35Z-ID-BmL"/>
-                        <outlet property="searchTextField" destination="vcF-1z-yVH" id="VoM-NG-9MK"/>
-                        <segue destination="Ovj-df-afp" kind="show" identifier="goSearchResult" id="yz7-ds-2EH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="104.8" y="33.733133433283363"/>
-        </scene>
-        <!--Search Result View Controller-->
-        <scene sceneID="fI5-LH-4S1">
-            <objects>
-                <viewController id="Ovj-df-afp" customClass="SearchResultViewController" customModule="GitSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="haq-Oc-pkl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-Mo-kAA">
-                                <rect key="frame" x="162.5" y="50" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Bha-ZG-Qdv"/>
-                                    <constraint firstAttribute="height" constant="50" id="QKJ-Pe-n3K"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-ay-AI8" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="0.0" y="130" width="375" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KUf-vt-QXR"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JYK-mr-6xA">
+                                <rect key="frame" x="10" y="189" width="355" height="478"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pZP-ay-AI8" firstAttribute="centerX" secondItem="WbK-Mo-kAA" secondAttribute="centerX" id="G9f-0H-f50"/>
+                            <constraint firstItem="JYK-mr-6xA" firstAttribute="trailing" secondItem="pZP-ay-AI8" secondAttribute="trailing" id="GB5-Y8-wY4"/>
+                            <constraint firstItem="E07-Sp-MRV" firstAttribute="bottom" secondItem="JYK-mr-6xA" secondAttribute="bottom" id="Ipj-BQ-Fpg"/>
+                            <constraint firstItem="JYK-mr-6xA" firstAttribute="leading" secondItem="pZP-ay-AI8" secondAttribute="leading" id="Spd-id-lG3"/>
                             <constraint firstItem="WbK-Mo-kAA" firstAttribute="centerX" secondItem="haq-Oc-pkl" secondAttribute="centerX" id="TAN-fa-zTa"/>
-                            <constraint firstItem="E07-Sp-MRV" firstAttribute="trailing" secondItem="pZP-ay-AI8" secondAttribute="trailing" id="Up9-xR-kpb"/>
-                            <constraint firstItem="pZP-ay-AI8" firstAttribute="leading" secondItem="E07-Sp-MRV" secondAttribute="leading" id="XSg-5U-Y7m"/>
-                            <constraint firstItem="pZP-ay-AI8" firstAttribute="top" secondItem="WbK-Mo-kAA" secondAttribute="bottom" constant="30" id="Yfh-8y-7kB"/>
-                            <constraint firstItem="WbK-Mo-kAA" firstAttribute="top" secondItem="E07-Sp-MRV" secondAttribute="top" constant="30" id="kxU-vb-C2G"/>
+                            <constraint firstItem="E07-Sp-MRV" firstAttribute="trailing" secondItem="pZP-ay-AI8" secondAttribute="trailing" constant="10" id="Up9-xR-kpb"/>
+                            <constraint firstItem="pZP-ay-AI8" firstAttribute="leading" secondItem="E07-Sp-MRV" secondAttribute="leading" constant="10" id="XSg-5U-Y7m"/>
+                            <constraint firstItem="pZP-ay-AI8" firstAttribute="top" secondItem="WbK-Mo-kAA" secondAttribute="bottom" constant="15" id="Yfh-8y-7kB"/>
+                            <constraint firstItem="WbK-Mo-kAA" firstAttribute="top" secondItem="E07-Sp-MRV" secondAttribute="top" constant="10" id="kxU-vb-C2G"/>
+                            <constraint firstItem="JYK-mr-6xA" firstAttribute="top" secondItem="pZP-ay-AI8" secondAttribute="bottom" id="tah-ID-q0Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E07-Sp-MRV"/>
                     </view>
+                    <navigationItem key="navigationItem" title="깃서치" id="owy-9B-aNW"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="gitIconImageView" destination="WbK-Mo-kAA" id="iBn-kI-qDm"/>
-                        <outlet property="searchTextField" destination="pZP-ay-AI8" id="WiG-h0-hru"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QH4-Kf-Cfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912.79999999999995" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1552.8" y="57.121439280359823"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b2g-Pu-hzF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NIP-t3-gSL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UAf-vc-Zi8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ovj-df-afp" kind="relationship" relationship="rootViewController" id="wwb-ii-cde"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puG-SB-sbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613.60000000000002" y="57.121439280359823"/>
         </scene>
     </scenes>
     <resources>
-        <image name="GitIcon" width="75" height="75"/>
+        <image name="GitLogo" width="75" height="75"/>
     </resources>
 </document>

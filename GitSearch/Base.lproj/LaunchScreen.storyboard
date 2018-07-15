@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="nPN-Df-56h">
-                                <rect key="frame" x="21" y="278.5" width="333" height="110"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7N1-4J-58K">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="U6a-kj-l9w"/>
-                                    <constraint firstAttribute="width" constant="333" id="pML-ns-EvH"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ygo-6G-d3J"/>
+                                    <constraint firstAttribute="height" constant="150" id="hVp-97-hks"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nPN-Df-56h" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CB3-gC-tu8"/>
-                            <constraint firstItem="nPN-Df-56h" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DoX-kL-vCS"/>
+                            <constraint firstItem="7N1-4J-58K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="73x-q0-Tr5"/>
+                            <constraint firstItem="7N1-4J-58K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8KK-o2-bNE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GitLogo" width="666" height="221"/>
+        <image name="GitLogo" width="75" height="75"/>
     </resources>
 </document>

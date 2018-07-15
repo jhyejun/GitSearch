@@ -4,7 +4,6 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - DZNEmptyDataSet (1.8.1)
-  - Hero (1.2.0)
   - Kingfisher (4.8.0)
   - ObjectMapper (3.3.0)
   - TextFieldEffects (1.4.0)
@@ -13,7 +12,6 @@ DEPENDENCIES:
   - Alamofire
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - DZNEmptyDataSet
-  - Hero
   - Kingfisher
   - ObjectMapper
   - TextFieldEffects
@@ -22,7 +20,6 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - DZNEmptyDataSet
-    - Hero
     - Kingfisher
     - ObjectMapper
     - TextFieldEffects
@@ -40,11 +37,10 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: 2f07ad0823d5d5badc8048b3245080761022f3a9
+PODFILE CHECKSUM: 698ede205303e3a8f59176c32f1aa072796af44f
 
 COCOAPODS: 1.5.0

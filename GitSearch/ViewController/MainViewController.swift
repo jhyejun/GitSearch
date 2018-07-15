@@ -14,25 +14,17 @@ import TextFieldEffects
 // MARK: - UIViewController
 class MainViewController: UIViewController {
 
-    // MARK: - Properties
-    @IBOutlet weak var gitIconImageView: UIImageView!
-    @IBOutlet weak var searchTextField: AkiraTextField!
+    // MARK: - Properties\
     
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatBlue, with: .light)
+        // Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatBlue, with: .light)
         
-        self.searchTextField.delegate = self
-        
-        self.gitIconImageView.hero.id = "gitIcon"
-        self.searchTextField.hero.id = "search"
-    }
-    
-    @IBAction func touchedSearchTextField(_ sender: Any) {
-        // self.hero.modalAnimationType = .auto
-        self.hero.replaceViewController(with: SearchResultViewController())
+        APIManager.getUserData { userData in
+            print(userData)
+        }
     }
     
 }

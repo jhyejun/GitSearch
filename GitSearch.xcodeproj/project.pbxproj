@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16C18420F5D3B500B2D745 /* MainViewController.swift */; };
 		CB1A70FB20F6F5E900C0B94A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FA20F6F5E900C0B94A /* User.swift */; };
-		CB1A710020F7188100C0B94A /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FF20F7188100C0B94A /* SearchResultViewController.swift */; };
 		CB1A710220F7355200C0B94A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A710120F7355200C0B94A /* APIManager.swift */; };
+		CB489E8B20F7C72A006BA2B6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB489E8A20F7C72A006BA2B6 /* APIService.swift */; };
 		CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67CCF820F3687C006B22B6 /* AppDelegate.swift */; };
 		CB67CCFE20F3687D006B22B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB67CCFC20F3687D006B22B6 /* Main.storyboard */; };
 		CB67CD0020F3687D006B22B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB67CCFF20F3687D006B22B6 /* Assets.xcassets */; };
@@ -24,8 +24,8 @@
 		A5D02D3672BC0F7F99A1442A /* Pods_GitSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB16C18420F5D3B500B2D745 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CB1A70FA20F6F5E900C0B94A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CB1A70FF20F7188100C0B94A /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		CB1A710120F7355200C0B94A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CB489E8A20F7C72A006BA2B6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		CB67CCF520F3687C006B22B6 /* GitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67CCF820F3687C006B22B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB67CCFD20F3687D006B22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				CB16C18420F5D3B500B2D745 /* MainViewController.swift */,
-				CB1A70FF20F7188100C0B94A /* SearchResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -83,6 +82,7 @@
 		CB1A70FE20F70F8B00C0B94A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CB489E8A20F7C72A006BA2B6 /* APIService.swift */,
 				CB1A710120F7355200C0B94A /* APIManager.swift */,
 			);
 			path = Network;
@@ -219,7 +219,6 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
@@ -229,7 +228,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
@@ -262,7 +260,7 @@
 				CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */,
 				CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */,
 				CB1A710220F7355200C0B94A /* APIManager.swift in Sources */,
-				CB1A710020F7188100C0B94A /* SearchResultViewController.swift in Sources */,
+				CB489E8B20F7C72A006BA2B6 /* APIService.swift in Sources */,
 				CB1A70FB20F6F5E900C0B94A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

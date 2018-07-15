@@ -11,7 +11,6 @@ target 'GitSearch' do
   pod 'ObjectMapper'
   pod 'Kingfisher'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-  pod 'Hero'
   pod 'TextFieldEffects'
   pod 'DZNEmptyDataSet'
   
