@@ -17,13 +17,23 @@ class SearchTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.numberOfReposLabel.text = "Number of repos: 0"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(data: User) {
+        self.selectionStyle = .none
+        
+        self.getNumberOfRepos(data)
+        if let imageURL = data.avatarImage {
+            self.avatarImageView.kf.setImage(with: URL(string: imageURL))
+        }
+        self.IdLabel.text = data.loginId
+    }
+    
+    func getNumberOfRepos(_ data: User) {
+        APIManager.getRepoData(repoURL: data.repoURL ?? "" ) { response in
+            self.numberOfReposLabel.text = "Number of repos: \(response.value?.count ?? 0)"
+        }
     }
     
 }

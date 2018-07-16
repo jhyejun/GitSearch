@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-// MARK: - SearchResult
+// MARK: - UserData
 struct UserData: Mappable {
     
     // MARK: - Properties
@@ -32,7 +32,7 @@ struct User: Mappable {
     // MARK: - Properties
     var avatarImage: String?
     var loginId: String?
-    var numberOfRepo: Int?
+    var repoURL: String?
     
     // MARK: - Methods
     init?(map: Map) {
@@ -41,7 +41,6 @@ struct User: Mappable {
     mutating func mapping(map: Map) {
         self.avatarImage <- map["avatar_url"]
         self.loginId <- map["login"]
-        self.numberOfRepo <- map["id"]
+        self.repoURL <- map["url"]
     }
-    
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB12251620FC626400E6627D /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB12251420FC626400E6627D /* EmptyTableViewCell.swift */; };
 		CB12251720FC626400E6627D /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB12251520FC626400E6627D /* EmptyTableViewCell.xib */; };
+		CB12251920FCB86100E6627D /* RepoDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB12251820FCB86100E6627D /* RepoDataMapper.swift */; };
 		CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16C18420F5D3B500B2D745 /* MainViewController.swift */; };
 		CB1A70FB20F6F5E900C0B94A /* UserDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FA20F6F5E900C0B94A /* UserDataMapper.swift */; };
 		CB1A710220F7355200C0B94A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A710120F7355200C0B94A /* APIManager.swift */; };
@@ -28,6 +29,7 @@
 		A5D02D3672BC0F7F99A1442A /* Pods_GitSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB12251420FC626400E6627D /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		CB12251520FC626400E6627D /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		CB12251820FCB86100E6627D /* RepoDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDataMapper.swift; sourceTree = "<group>"; };
 		CB16C18420F5D3B500B2D745 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CB1A70FA20F6F5E900C0B94A /* UserDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataMapper.swift; sourceTree = "<group>"; };
 		CB1A710120F7355200C0B94A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1A70FA20F6F5E900C0B94A /* UserDataMapper.swift */,
+				CB12251820FCB86100E6627D /* RepoDataMapper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,7 +243,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
@@ -248,7 +250,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
@@ -281,6 +282,7 @@
 				CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */,
 				CB1A710220F7355200C0B94A /* APIManager.swift in Sources */,
 				CB489E9020FB6340006BA2B6 /* SearchTableViewCell.swift in Sources */,
+				CB12251920FCB86100E6627D /* RepoDataMapper.swift in Sources */,
 				CB489E8B20F7C72A006BA2B6 /* APIService.swift in Sources */,
 				CB12251620FC626400E6627D /* EmptyTableViewCell.swift in Sources */,
 				CB1A70FB20F6F5E900C0B94A /* UserDataMapper.swift in Sources */,
@@ -432,10 +434,7 @@
 				DEVELOPMENT_TEAM = 7XZYKQ99YK;
 				INFOPLIST_FILE = GitSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jhyejun.GitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -452,10 +451,7 @@
 				DEVELOPMENT_TEAM = 7XZYKQ99YK;
 				INFOPLIST_FILE = GitSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jhyejun.GitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

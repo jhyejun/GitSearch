@@ -11,7 +11,6 @@ target 'GitSearch' do
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'ObjectMapper'
   pod 'Kingfisher'
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   
 end
 

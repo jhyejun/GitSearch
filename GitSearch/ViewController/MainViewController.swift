@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 import Alamofire
 
 // MARK: - UIViewController
@@ -26,11 +25,17 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.registerTableViewCell()
+        
         self.userSearchBar.delegate = self
         self.searchResultTableView.delegate = self
         self.searchResultTableView.dataSource = self
-        
-        // Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatBlue, with: .light)
+    }
+    
+    // 테이블뷰 셀 등록
+    func registerTableViewCell() {
+        self.searchResultTableView.register(UINib(nibName: "EmptyTableViewCell", bundle: nil), forCellReuseIdentifier: "EmptyTableViewCell")
+        self.searchResultTableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchTableViewCell")
     }
     
     // 테이블뷰 데이터 받아오는 함수
@@ -61,26 +66,29 @@ extension MainViewController: UISearchBarDelegate {
     
     // MARK: - Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.searchResultTableView.setContentOffset(CGPoint.zero, animated: false)
         self.totalCount = 0
         self.pageCount = 1
         
-        // 텍스트가 바뀌었지만 텍스트가 없는 경우 (예를 들면, 어떤 걸 쳤다가 모두 지웠을 때의 상황)
-        guard !searchText.isEmpty else {
+        guard let query = searchBar.text, query.trimmingCharacters(in: .whitespaces) != "" else {
             self.cellData.removeAll()
             self.searchResultTableView.reloadData()
             return
         }
         
-        // 일반적인 텍스트가 수정될 때의 경우
         self.parameters = [
             "q" : searchText,
-            "page" : pageCount,
+            "page" : 1,
             "per_page" : 20
         ]
         
-        self.setSearchTable(data: [User]())
-        self.searchResultTableView.reloadData()
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.reload(_:)), object: searchBar)
+        perform(#selector(self.reload(_:)), with: searchBar, afterDelay: 0.2)
+    }
+    
+    @objc func reload(_ searchBar: UISearchBar) {
+        if searchBar.text != "" {
+            self.setSearchTable(data: [User]())
+        }
     }
     
 }
@@ -116,35 +124,25 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 검색 결과값이 없을 때
         if self.cellData.isEmpty {
-            let cell = Bundle.main.loadNibNamed("EmptyTableViewCell", owner: self, options: nil)?.first as! EmptyTableViewCell
-            cell.selectionStyle = .none
-            
-            return cell
+            self.searchResultTableView.setContentOffset(CGPoint.zero, animated: false)
+            return tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as? EmptyTableViewCell ?? UITableViewCell()
         }
-        
+            
         // 검색 결과값이 있을 때
         else {
-            let cell = Bundle.main.loadNibNamed("SearchTableViewCell", owner: self, options: nil)?.first as! SearchTableViewCell
-            cell.selectionStyle = .none
-            
-            if let imageURL = self.cellData[indexPath.row].avatarImage {
-                cell.avatarImageView.kf.setImage(with: URL(string: imageURL))
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell {
+                cell.configure(data: self.cellData[indexPath.row])
+                return cell
             }
             
-            cell.IdLabel.text = self.cellData[indexPath.row].loginId
-            
-            if let numberOfRepo = self.cellData[indexPath.row].numberOfRepo {
-                cell.numberOfReposLabel.text = "Number of repos: \(numberOfRepo)"
-            }
-            
-            return cell
+            return UITableViewCell()
         }
     }
     
     // TableView 데이터 더 불러오기
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // 데이터의 총 개수에서 10개를 뺀 값번째의 셀을 불러올 때 실행하고 데이터의 총 개수는 20개보다 커야 실행한다.
-        if indexPath.row == self.cellData.count - 10 && self.totalCount > 20 {
+        if indexPath.row == self.cellData.count - 5 && self.totalCount > 20 {
             // 페이지 카운팅
             if self.pageCount <= (self.totalCount / 20) {
                 self.pageCount += 1
