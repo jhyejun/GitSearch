@@ -8,7 +8,6 @@
 
 import UIKit
 import ChameleonFramework
-import TextFieldEffects
 import Alamofire
 
 // MARK: - UIViewController
@@ -63,6 +62,8 @@ extension MainViewController: UISearchBarDelegate {
     // MARK: - Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // 텍스트가 바뀌었지만 텍스트가 없는 경우 (예를 들면, 어떤 걸 쳤다가 모두 지웠을 때의 상황)
+        self.pageCount = 1
+        
         guard !searchText.isEmpty else {
             self.parameters = [
                 "q" : searchText,
