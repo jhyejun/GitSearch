@@ -61,16 +61,13 @@ extension MainViewController: UISearchBarDelegate {
     
     // MARK: - Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // 텍스트가 바뀌었지만 텍스트가 없는 경우 (예를 들면, 어떤 걸 쳤다가 모두 지웠을 때의 상황)
+        self.searchResultTableView.setContentOffset(CGPoint.zero, animated: false)
+        self.totalCount = 0
         self.pageCount = 1
         
+        // 텍스트가 바뀌었지만 텍스트가 없는 경우 (예를 들면, 어떤 걸 쳤다가 모두 지웠을 때의 상황)
         guard !searchText.isEmpty else {
-            self.parameters = [
-                "q" : searchText,
-                "page" : pageCount,
-                "per_page" : 20
-            ]
-            
+            self.cellData.removeAll()
             self.searchResultTableView.reloadData()
             return
         }
@@ -93,28 +90,55 @@ extension MainViewController: UISearchBarDelegate {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cellData.count
+        // 검색 결과값이 없을 때
+        if self.cellData.isEmpty {
+            return 1
+        }
+        
+        // 검색 결과값이 있을 때
+        else {
+            return self.cellData.count
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88
+        // 검색 결과값이 없을 때
+        if self.cellData.isEmpty {
+            return self.searchResultTableView.bounds.height
+        }
+        
+        // 검색 결과값이 있을 때
+        else {
+            return 88
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("SearchTableViewCell", owner: self, options: nil)?.first as! SearchTableViewCell
-        cell.selectionStyle = .none
-        
-        if let imageURL = self.cellData[indexPath.row].avatarImage {
-            cell.avatarImageView.kf.setImage(with: URL(string: imageURL))
+        // 검색 결과값이 없을 때
+        if self.cellData.isEmpty {
+            let cell = Bundle.main.loadNibNamed("EmptyTableViewCell", owner: self, options: nil)?.first as! EmptyTableViewCell
+            cell.selectionStyle = .none
+            
+            return cell
         }
         
-        cell.IdLabel.text = self.cellData[indexPath.row].loginId
-        
-        if let numberOfRepo = self.cellData[indexPath.row].numberOfRepo {
-            cell.numberOfReposLabel.text = "Number of repos: \(numberOfRepo)"
+        // 검색 결과값이 있을 때
+        else {
+            let cell = Bundle.main.loadNibNamed("SearchTableViewCell", owner: self, options: nil)?.first as! SearchTableViewCell
+            cell.selectionStyle = .none
+            
+            if let imageURL = self.cellData[indexPath.row].avatarImage {
+                cell.avatarImageView.kf.setImage(with: URL(string: imageURL))
+            }
+            
+            cell.IdLabel.text = self.cellData[indexPath.row].loginId
+            
+            if let numberOfRepo = self.cellData[indexPath.row].numberOfRepo {
+                cell.numberOfReposLabel.text = "Number of repos: \(numberOfRepo)"
+            }
+            
+            return cell
         }
-        
-        return cell
     }
     
     // TableView 데이터 더 불러오기

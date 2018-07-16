@@ -6,33 +6,46 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="483" id="KGk-i7-Jjw" customClass="EmptyTableViewCell" customModule="GitSearch" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="483"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="364" id="KGk-i7-Jjw" customClass="EmptyTableViewCell" customModule="GitSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="364"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="482.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="363.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Stz-dc-lnC">
-                        <rect key="frame" x="122.5" y="204" width="75" height="75"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitCharacter" translatesAutoresizingMaskIntoConstraints="NO" id="Stz-dc-lnC">
+                        <rect key="frame" x="85.5" y="57.5" width="149" height="149"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="149" id="3ri-W4-Lt6"/>
+                            <constraint firstAttribute="width" secondItem="Stz-dc-lnC" secondAttribute="height" multiplier="1:1" id="Lvn-aX-qlb"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSX-Sd-0LL">
+                        <rect key="frame" x="121" y="231.5" width="78" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Stz-dc-lnC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="2Q0-Dy-OUQ"/>
-                    <constraint firstItem="Stz-dc-lnC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cMh-CY-Sjx"/>
+                    <constraint firstItem="vSX-Sd-0LL" firstAttribute="centerX" secondItem="Stz-dc-lnC" secondAttribute="centerX" id="7yo-ZJ-QiU"/>
+                    <constraint firstItem="Stz-dc-lnC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-50" id="cMh-CY-Sjx"/>
+                    <constraint firstItem="vSX-Sd-0LL" firstAttribute="top" secondItem="Stz-dc-lnC" secondAttribute="bottom" constant="25" id="mvl-HH-hRm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="34" y="-34.5"/>
+            <point key="canvasLocation" x="34" y="25"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="GitLogo" width="75" height="75"/>
+        <image name="GitCharacter" width="298" height="298"/>
     </resources>
 </document>

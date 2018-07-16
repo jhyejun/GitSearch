@@ -13,15 +13,24 @@ import AlamofireObjectMapper
 struct APIManager: APIService {
     
     // MARK: - UserData
+    static var accessToken: String = ""
     
     // MARK: Methods
     static func getUserData(parameters: [String: Any], _ completion: @escaping (DataResponse<UserData>) -> Void) {
         let urlString: String = self.url("/search/users")
+        
+        if let infoDic: [String: Any] = Bundle.main.infoDictionary {
+            if let token: String = infoDic["Authorization"] as? String {
+                self.accessToken = token
+            }
+        }
+        
         let headers: HTTPHeaders = [
-            "Authorization" : "token 1d22b2c0d2c221072b93057136400cf5a9addf0a"
+            "Authorization" : self.accessToken
         ]
         
-        Alamofire.request(urlString, method: .get, parameters: parameters, headers: headers).validate(statusCode: 200 ..< 400).responseObject { (response: DataResponse<UserData>) in
+        Alamofire.request(urlString, method: .get, parameters: parameters, headers: headers).validate(statusCode: 200 ..< 500).responseObject { (response: DataResponse<UserData>) in
+            print(response)
             switch response.result {
             case .success:
                 completion(response)
