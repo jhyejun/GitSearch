@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Authorization</key>
-	<string>token 1cd8806a19b946a3cfac3852e70c91dc61a83ebb</string>
+	<string>dG9rZW4gNWNmYTZjMTg5YWMzMTBmNDEyODIxMTdiOWMwNGFmYjU5NzQwNmY3Yw==</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -21,7 +21,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>148</string>
+	<string>159</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

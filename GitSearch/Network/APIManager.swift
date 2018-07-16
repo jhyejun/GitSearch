@@ -21,7 +21,9 @@ struct APIManager: APIService {
         
         if let infoDic: [String: Any] = Bundle.main.infoDictionary {
             if let token: String = infoDic["Authorization"] as? String {
-                self.accessToken = token
+                if let tokenData = Data(base64Encoded: token) {
+                    self.accessToken = String(data: tokenData, encoding: .utf8)!
+                }
             }
         }
         
