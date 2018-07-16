@@ -8,11 +8,10 @@ target 'GitSearch' do
 
   # Pods for GitSearch
   pod 'Alamofire'
+  pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'ObjectMapper'
   pod 'Kingfisher'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-  pod 'TextFieldEffects'
-  pod 'DZNEmptyDataSet'
   
 end
 

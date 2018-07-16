@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB12251620FC626400E6627D /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB12251420FC626400E6627D /* EmptyTableViewCell.swift */; };
+		CB12251720FC626400E6627D /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB12251520FC626400E6627D /* EmptyTableViewCell.xib */; };
 		CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16C18420F5D3B500B2D745 /* MainViewController.swift */; };
-		CB1A70FB20F6F5E900C0B94A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FA20F6F5E900C0B94A /* User.swift */; };
+		CB1A70FB20F6F5E900C0B94A /* UserDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A70FA20F6F5E900C0B94A /* UserDataMapper.swift */; };
 		CB1A710220F7355200C0B94A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1A710120F7355200C0B94A /* APIManager.swift */; };
 		CB489E8B20F7C72A006BA2B6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB489E8A20F7C72A006BA2B6 /* APIService.swift */; };
+		CB489E9020FB6340006BA2B6 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB489E8E20FB6340006BA2B6 /* SearchTableViewCell.swift */; };
+		CB489E9120FB6340006BA2B6 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB489E8F20FB6340006BA2B6 /* SearchTableViewCell.xib */; };
 		CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB67CCF820F3687C006B22B6 /* AppDelegate.swift */; };
 		CB67CCFE20F3687D006B22B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB67CCFC20F3687D006B22B6 /* Main.storyboard */; };
 		CB67CD0020F3687D006B22B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB67CCFF20F3687D006B22B6 /* Assets.xcassets */; };
@@ -22,10 +26,14 @@
 		2A032273303A611529629722 /* Pods-GitSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch.release.xcconfig"; sourceTree = "<group>"; };
 		71DBA2942939E4451AFD5014 /* Pods-GitSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		A5D02D3672BC0F7F99A1442A /* Pods_GitSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB12251420FC626400E6627D /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		CB12251520FC626400E6627D /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		CB16C18420F5D3B500B2D745 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		CB1A70FA20F6F5E900C0B94A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CB1A70FA20F6F5E900C0B94A /* UserDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataMapper.swift; sourceTree = "<group>"; };
 		CB1A710120F7355200C0B94A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CB489E8A20F7C72A006BA2B6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CB489E8E20FB6340006BA2B6 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		CB489E8F20FB6340006BA2B6 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		CB67CCF520F3687C006B22B6 /* GitSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67CCF820F3687C006B22B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB67CCFD20F3687D006B22B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +74,7 @@
 		CB1A70FC20F6F5F700C0B94A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB1A70FA20F6F5E900C0B94A /* User.swift */,
+				CB1A70FA20F6F5E900C0B94A /* UserDataMapper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +94,17 @@
 				CB1A710120F7355200C0B94A /* APIManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CB489E8D20FB631F006BA2B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB489E8E20FB6340006BA2B6 /* SearchTableViewCell.swift */,
+				CB489E8F20FB6340006BA2B6 /* SearchTableViewCell.xib */,
+				CB12251420FC626400E6627D /* EmptyTableViewCell.swift */,
+				CB12251520FC626400E6627D /* EmptyTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CB67CCEC20F3687C006B22B6 = {
@@ -112,6 +131,7 @@
 				CB1A70FE20F70F8B00C0B94A /* Network */,
 				CB1A70FC20F6F5F700C0B94A /* Model */,
 				CB1A70FD20F6F60000C0B94A /* ViewController */,
+				CB489E8D20FB631F006BA2B6 /* View */,
 				CB67CCF820F3687C006B22B6 /* AppDelegate.swift */,
 				CB67CCFC20F3687D006B22B6 /* Main.storyboard */,
 				CB67CCFF20F3687D006B22B6 /* Assets.xcassets */,
@@ -183,6 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB67CD0320F3687D006B22B6 /* LaunchScreen.storyboard in Resources */,
+				CB12251720FC626400E6627D /* EmptyTableViewCell.xib in Resources */,
+				CB489E9120FB6340006BA2B6 /* SearchTableViewCell.xib in Resources */,
 				CB67CD0020F3687D006B22B6 /* Assets.xcassets in Resources */,
 				CB67CCFE20F3687D006B22B6 /* Main.storyboard in Resources */,
 			);
@@ -217,20 +239,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GitSearch/Pods-GitSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -260,8 +280,10 @@
 				CB16C18520F5D3B500B2D745 /* MainViewController.swift in Sources */,
 				CB67CCF920F3687C006B22B6 /* AppDelegate.swift in Sources */,
 				CB1A710220F7355200C0B94A /* APIManager.swift in Sources */,
+				CB489E9020FB6340006BA2B6 /* SearchTableViewCell.swift in Sources */,
 				CB489E8B20F7C72A006BA2B6 /* APIService.swift in Sources */,
-				CB1A70FB20F6F5E900C0B94A /* User.swift in Sources */,
+				CB12251620FC626400E6627D /* EmptyTableViewCell.swift in Sources */,
+				CB1A70FB20F6F5E900C0B94A /* UserDataMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +432,10 @@
 				DEVELOPMENT_TEAM = 7XZYKQ99YK;
 				INFOPLIST_FILE = GitSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jhyejun.GitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -427,7 +452,10 @@
 				DEVELOPMENT_TEAM = 7XZYKQ99YK;
 				INFOPLIST_FILE = GitSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jhyejun.GitSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

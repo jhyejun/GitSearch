@@ -8,6 +8,24 @@
 
 import ObjectMapper
 
+// MARK: - SearchResult
+struct UserData: Mappable {
+    
+    // MARK: - Properties
+    var totalCount: Int?
+    var users: [User] = []
+    
+    // MARK: - Methods
+    init?(map: Map) {
+    }
+    
+    mutating func mapping(map: Map) {
+        self.totalCount <- map["total_count"]
+        self.users <- map["items"]
+    }
+    
+}
+
 // MARK: - User
 struct User: Mappable {
     

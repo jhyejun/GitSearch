@@ -7,7 +7,7 @@
 //
 
 import Alamofire
-import ObjectMapper
+import AlamofireObjectMapper
 
 // MARK: - APIManager
 struct APIManager: APIService {
@@ -15,63 +15,33 @@ struct APIManager: APIService {
     // MARK: - UserData
     
     // MARK: Methods
-    static func getUserData(_ completion: @escaping (DataResponse<User>) -> Void) {
+    static func getUserData(parameters: [String: Any], _ completion: @escaping (DataResponse<UserData>) -> Void) {
         let urlString: String = self.url("/search/users")
-        
         let headers: HTTPHeaders = [
-            "Authorization" : "token bc7e666764a115a52ad8cfe4e5c17aca33daa5c0"
-        ]
-        let parameters: [String: String] = [
-            "q" : "Jinseo"
+            "Authorization" : "token 6b153b99dfef76a466e1d5f8ff613d3825691a7d"
         ]
         
-        Alamofire.request(urlString, method: .get, parameters: parameters, headers: headers).validate(statusCode: 200 ..< 400).responseJSON { response in
-            /* let response: DataResponse<User> = response.flatMapResult { json in
-                if let user = Mapper<User>().map(JSONObject: json) {
-                    return .success(user)
-                }
+        Alamofire.request(urlString, method: .get, parameters: parameters, headers: headers).validate(statusCode: 200 ..< 400).responseObject { (response: DataResponse<UserData>) in
+            switch response.result {
+            case .success:
+                completion(response)
                 
-                else {
-                    // let error = MappingError(from: json, to: User.self)
-                    // return .failure(error)
-                    
-                    return .failure(Error as! Error.self)
-                }
+            case .failure(let error):
+                print("Failed Request [getUserData] - \(error)")
             }
-            
-            completion(response) */
         }
     }
     
     // MARK: - RepoData
     
     // MARK: Methods
-    func getRepoData() {
+    static func getRepoData(users: String = "", _ completion: @escaping (DataResponse<UserData>) -> Void) {
+        let urlString: String = self.url("/users/\(users)/repos")
+        let headers: HTTPHeaders = [
+            "Authorization" : "token 6b153b99dfef76a466e1d5f8ff613d3825691a7d"
+        ]
         
-    }
-    
-}
-
-extension DataResponse {
-    
-    func flatMapResult<T>(_ transform: (Value) -> Result<T>) -> DataResponse<T> {
-        let result: Result<T>
-        
-        switch self.result {
-        case .success(let value):
-            result = transform(value)
-            
-        case .failure(let error):
-            result = .failure(error)
-        }
-        
-        return DataResponse<T>(
-            request: self.request,
-            response: self.response,
-            data: self.data,
-            result: result,
-            timeline: self.timeline
-        )
+        // Alamofire.request(urlString).validate(statusCode: 200 ..< 400).responseObject(completionHandler: <#T##(DataResponse<BaseMappable>) -> Void#>)
     }
     
 }
